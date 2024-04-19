@@ -100,20 +100,16 @@ const Contact = () => {
         alt="iksl"
       />
       <Image
-        className=" top-1/4 left-1/3  absolute max-w-14 aspect-square object-cover rounded-full"
+        className="md:hidden top-1/4 left-1/3  absolute max-w-14 aspect-square object-cover rounded-full"
         src={items_image2}
         alt="iksl"
       />
       <Image
-        className=" top-3/4 left-1/3  absolute max-w-14 aspect-square object-cover rounded-full"
+        className="md:hidden top-3/4 left-1/3  absolute max-w-14 aspect-square object-cover rounded-full"
         src={items_image3}
         alt="iksl"
       />
-      <Image
-        className="top-3/4 left-3/4  absolute max-w-14 aspect-square object-cover rounded-full"
-        src={items_image4}
-        alt="iksl"
-      />
+     
     </div>
   );
 };

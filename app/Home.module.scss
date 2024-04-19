@@ -45,7 +45,7 @@
 .animatedText {
   display: grid;
   width: fit-content;
-  height: 2.2rem;
+  height: 3rem;
 
   position: relative;
   top: 0;
@@ -71,13 +71,13 @@
     top: 0;
   }
   25% {
-    top: -58px;
+    top: -60px;
   }
   50% {
-    top: -116px;
+    top: -120px;
   }
   75% {
-    top: -172px;
+    top: -180px;
   }
 
   100% {
@@ -118,7 +118,7 @@
     overflow: hidden;
     input:nth-child(1) {
       display: flex;
-      width: 100%;
+      min-width: 0;
     }
   }
 }

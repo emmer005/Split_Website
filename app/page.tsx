@@ -15,6 +15,8 @@ import { v4 as uuidv4 } from 'uuid';
 import Link from "next/link";
 import Button from "./components/Button/Button";
 import Product from "./user/product/page";
+import Manner from "./user/aboutUs/manners/Manner";
+import TextAfter from "./components/TextAfter/TextAfter";
 
 export default function Home() {
   // const {
@@ -48,7 +50,7 @@ export default function Home() {
 
             <div className={`${styles.inputGrid}`}>
               <input
-                className=" rounded-full py-2 border-slate-500 border-2 px-6 flex items-center focus:outline-none bg-transparent"
+                className="rounded-full min-w-0 py-2 border-slate-500 border-2 px-6 focus:outline-none bg-transparent"
                 type="text"
                 placeholder="Enter a product"
               />
@@ -119,9 +121,7 @@ export default function Home() {
       {/* Section two */}
       <section >
     <div className=" mx-auto  w-[80%] space-y-8">
-   <span className=" w-full grid items-center justify-center h-fit relative">
-   <h1 className={`${styles.supText} ${styles.textBefore} w-fit text-center `}> Services </h1>
-   </span>
+      <TextAfter name="Services"/>
      <div className={`${styles.section2} gap-y-5 gap-x-3`} >
      {
         AutoboxArray.map((items) => (
@@ -148,11 +148,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className=" w-[80vw] mx-auto">
-      <span className=" w-full grid items-center justify-center h-fit relative">
-   <h1 className={`${styles.supText} ${styles.textBefore} w-fit text-center `}> Products </h1>
-   </span>
+      <section className="">
+      <TextAfter name="Product"/>
    <Product/>
+      </section>
+      <section>
+     <TextAfter name="About"/>
+        <Manner/>
       </section>
     </div>
   );
@@ -163,20 +165,20 @@ const AutoboxArray = [
     title: "Automated Reports",
     subText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minus molestias reiciendis",
     imagePage:"/Img/google.png",
-    bgColor: "bg-slate-300"
+    bgColor: "bg-slate-300 mt-20 "
   },
   {
     title: "Customer Care",
     subText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minus molestias reiciendis",
     imagePage:"/Img/customercare.png"
     ,
-    bgColor: "bg-violet-300"
+    bgColor: "bg-pink-200 "
   },
   {
     title: "Accessibility",
     subText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minus molestias reiciendis",
     imagePage:"/Img/access.png"
     ,
-    bgColor: "bg-slate-300"
+    bgColor: "bg-slate-300 mt-20"
   }
 ]

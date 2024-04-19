@@ -129,14 +129,14 @@ const Header = () => {
               </svg>
             </div>
             ) : (
-           <div  className={` ${styles.ResponsiveButton}  fixed z-30 right-8 top-3 inline-flex items-center justify-around w-36 p-2  `}>
+           <div  className={` ${styles.ResponsiveButton}  fixed z-30 right-8 top-3 inline-flex items-center justify-around gap-2 p-2  `}>
               <span className="">MENU</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
                 y="0px"
-                width="40"
-                height="40"
+                width="30"
+                height="30"
                 viewBox="0,0,256,256"
               >
                 <g fill="#ffffff">

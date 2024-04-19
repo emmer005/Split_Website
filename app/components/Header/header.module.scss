@@ -35,5 +35,6 @@
   background-color: $unique-color;
   span{
     color: $white-color;
+    font-size: map-get($size, sm );
   }
 }
