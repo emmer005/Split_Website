@@ -9,6 +9,9 @@ import Image from "next/image";
 import { FaUserPlus } from "react-icons/fa";
 import { AiFillSound } from "react-icons/ai";
 import AnimatedText from "./components/AnimatedText/AnimatedText";
+import { title } from "process";
+import Autobox from "./components/Home/AutoBox/Autobox";
+import { v4 as uuidv4 } from 'uuid';
 
 export default function Home() {
   // const {
@@ -111,68 +114,50 @@ export default function Home() {
         </form>
       </section>
       {/* Section two */}
-      <section className={`${styles.section2} gap-y-5 gap-x-3 `}>
-        <div className="  p-6 justify-between grid items-center bg-sky-200">
-          <div>
-            <h1 className=" text-3xl font-bold">Automated Reports</h1>
-            <p className={styles.subText}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse
-              minus molestias reiciendis
-            </p>
-          </div>
-          <div className=" flex justify-center items-center">
-            <Image
-              width={100}
-              height={100}
-              className="w-40 aspect-square object-contain"
-              src="/Img/google.png"
-              alt=""
-            />
-          </div>
-        </div>
-        <div className="  p-6 justify-between  items-center bg-pink-200">
-          <div>
-            <h1 className=" text-3xl font-bold">Customer Service</h1>
-            <p className={styles.subText}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse
-              minus molestias reiciendis
-            </p>
-          </div>
-          <div className=" flex justify-center items-center">
-            <Image
-              width={100}
-              height={100}
-              className="w-40 aspect-square object-contain"
-              src="/Img/customerCare.png"
-              alt=""
-            />
-          </div>
-        </div>
-        <div className="  p-6 justify-between  items-center bg-orange-200">
-          <div>
-            <h1 className=" text-3xl font-bold">Accessibility </h1>
-            <p className={styles.subText}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse
-              minus molestias reiciendis
-            </p>
-          </div>
-          <div className=" flex justify-center items-center">
-            <Image
-              width={100}
-              height={100}
-              className="w-40 aspect-square object-contain"
-              src="/Img/access.png"
-              alt=""
-            />
-          </div>
-        </div>
+      <section >
+    <div className=" mx-auto  w-[80%] space-y-8">
+    <h1 className={`${styles.h1} text-center `}> Services </h1>
+     <div className={`${styles.section2} gap-y-5 gap-x-3`} >
+     {
+        AutoboxArray.map((items) => (
+          <Autobox key={uuidv4()} tailwindStyle={items.bgColor} imagePath={items.imagePage} title={items.title} subText={items.subText}/>
+        ))
+      }
+     </div>
+    </div>
       </section>
-      <section className="  relative overflow-hidden h-[70vh]">
-        <video className=" z-0  absolute w-[100vw] " autoPlay loop muted>
-          <source src="/Img/video.mp4" type="video/mp4" />
+      <section className={styles.videoSection}>
+        <video className="z-0 flex object-cover h-[100%]  absolute w-[100vw] " autoPlay loop muted>
+          <source  src="/Img/video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+        <div className={ `${styles.videoBg} h-full w-full absolute `}>
+          <h1 className={`${styles.h1} text-white`}>Hello There</h1>
+        </div>
       </section>
     </div>
   );
 }
+
+const AutoboxArray = [
+  {
+    title: "Automated Reports",
+    subText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minus molestias reiciendis",
+    imagePage:"/Img/google.png",
+    bgColor: "bg-slate-300"
+  },
+  {
+    title: "Customer Care",
+    subText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minus molestias reiciendis",
+    imagePage:"/Img/customercare.png"
+    ,
+    bgColor: "bg-pink-200"
+  },
+  {
+    title: "Accessibility",
+    subText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minus molestias reiciendis",
+    imagePage:"/Img/access.png"
+    ,
+    bgColor: "bg-slate-300"
+  }
+]
