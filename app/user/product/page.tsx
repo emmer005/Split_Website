@@ -6,7 +6,7 @@ import stylesMap from "./ProductItems.module.scss";
 
 const Product = () => {
   return (
-    <div className="flex flex-col gap-20">
+    <div className=" mx-auto flex flex-col gap-20">
       <div className="flex flex-col items-center text-center">
         <div className={styles.wrapper}>
           <div className={styles.statictxt}>Meet our new limited</div>

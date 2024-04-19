@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import styles from './Autobox.module.scss'
 
 interface type {
     title: string,
@@ -10,10 +11,10 @@ interface type {
 
 const Autobox = (props: type) => {
   return (
-    <div className={`${props.tailwindStyle} p-6 justify-between grid items-center`} >
+    <div className={`${props.tailwindStyle} rounded-md p-6 justify-between grid items-center`} >
     <div>
-      <h1 className=" text-3xl font-bold">{props.title}</h1>
-      <p >
+      <h1 className={` ${styles.supText} text-3xl font-bold`}>{props.title}</h1>
+      <p className={` ${styles.subText}`} >
         {props.subText}
       </p>
     </div>

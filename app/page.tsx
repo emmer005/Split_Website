@@ -12,6 +12,9 @@ import AnimatedText from "./components/AnimatedText/AnimatedText";
 import { title } from "process";
 import Autobox from "./components/Home/AutoBox/Autobox";
 import { v4 as uuidv4 } from 'uuid';
+import Link from "next/link";
+import Button from "./components/Button/Button";
+import Product from "./user/product/page";
 
 export default function Home() {
   // const {
@@ -116,7 +119,9 @@ export default function Home() {
       {/* Section two */}
       <section >
     <div className=" mx-auto  w-[80%] space-y-8">
-    <h1 className={`${styles.h1} text-center `}> Services </h1>
+   <span className=" w-full grid items-center justify-center h-fit relative">
+   <h1 className={`${styles.supText} ${styles.textBefore} w-fit text-center `}> Services </h1>
+   </span>
      <div className={`${styles.section2} gap-y-5 gap-x-3`} >
      {
         AutoboxArray.map((items) => (
@@ -126,14 +131,28 @@ export default function Home() {
      </div>
     </div>
       </section>
+      
       <section className={styles.videoSection}>
         <video className="z-0 flex object-cover h-[100%]  absolute w-[100vw] " autoPlay loop muted>
           <source  src="/Img/video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className={ `${styles.videoBg} h-full w-full absolute `}>
-          <h1 className={`${styles.h1} text-white`}>Hello There</h1>
+        <div className="  flex flex-col text-center gap-4 items-center">
+        <h1 className={`${styles.h1} text-white`}>Explore the world of Technology</h1>
+        <h4 className={`${styles.subText} text-zinc-300 w-[70vw] "`}> Technology is about meeting human needs through innovation and action. Stay informed about the rapid evolution of the tech landscape in our digital age!</h4>
+          <Link href="/user/GetStarted">
+          <Button title="Go start now" bgColor="#fe02a0" />
+        </Link>
         </div>
+        </div>
+      </section>
+
+      <section className=" w-[80vw] mx-auto">
+      <span className=" w-full grid items-center justify-center h-fit relative">
+   <h1 className={`${styles.supText} ${styles.textBefore} w-fit text-center `}> Products </h1>
+   </span>
+   <Product/>
       </section>
     </div>
   );
@@ -151,7 +170,7 @@ const AutoboxArray = [
     subText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minus molestias reiciendis",
     imagePage:"/Img/customercare.png"
     ,
-    bgColor: "bg-pink-200"
+    bgColor: "bg-violet-300"
   },
   {
     title: "Accessibility",

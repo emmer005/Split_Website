@@ -16,12 +16,34 @@ $marginSpace: (
   ),
 );
 $size: (
-  "sm": clamp(0.8rem, 2.3vh, 2rem),
-  "md": 1rem,
+  "sm": clamp(0.4rem, 2.3vh, 2rem),
+  "md": clamp(1rem, 2.8vw, 5rem),
   "lg": 1.4rem,
-  "xl": clamp(2.5rem, 3.6vw, 8rem),
+  "xl": clamp(2rem, 3.6vw, 8rem),
 );
-
+.supText{
+  font-size: map-get($size, md);
+}
 .subText {
   font-size: map-get($size, sm);
+}
+
+  .h1 {
+    font-size: map-get($size, xl);
+    line-height: 1;
+    font-weight: 700;
+  }
+.textBefore{
+
+position: relative;
+&:before{
+  content: "";
+  position: absolute;
+ top: 6px;
+  left: -5px;
+  
+  width: 4px;
+  height: 70%;
+  background-color: $button-color;
+  }
 }
