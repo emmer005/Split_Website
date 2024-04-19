@@ -1,0 +1,31 @@
+@import "../sass/variables";
+.button {
+  padding: 0.8rem;
+  border-radius: 2px;
+  width: fit-content;
+  height: fit-content;
+  color: $white-color;
+  z-index: 1;
+  position: relative;
+  transition: 500ms linear;
+}
+.button:hover {
+  color: $white-color;
+  background-color: transparent;
+}
+.button:hover::after {
+  width: 100%;
+  transition: 500ms;
+}
+.button::after {
+  border-radius: 2px;
+  transition: 500ms ease-in;
+  position: absolute;
+  content: "";
+  width: 0;
+  background-color: $button-color;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}

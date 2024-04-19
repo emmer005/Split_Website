@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "src": "/Img/worker1.png",
+    "alt": "worker1",
+    "Sty": "blue",
+    "leftStyle": "leftStyle"
+  },
+  {
+    "id": 2,
+    "src": "/Img/worker2.png",
+    "alt": "worker2",
+    "leftStyle": "leftStyle1"
+  },
+  {
+    "id": 3,
+    "src": "/Img/worker3.png",
+    "alt": "worker3",
+    "leftStyle": "leftStyle2"
+  },
+  {
+    "id": 4,
+    "src": "/Img/worker4.png",
+    "alt": "worker4",
+    "leftStyle": "leftStyle3"
+  },
+  {
+    "id": 5,
+    "src": "/Img/worker5.png",
+    "alt": "worker5",
+    "leftStyle": "leftStyle4"
+  },
+  {
+    "id": 6,
+    "src": "/Img/worker6.png",
+    "alt": "worker6",
+    "leftStyle": "leftStyle5"
+  }
+]

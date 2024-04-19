@@ -1,0 +1,71 @@
+@import "../../components/sass/variables";
+
+.mainBody {
+  display: grid;
+  gap: 1.5rem;
+  line-height: 1;
+  grid-auto-rows: 120px auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+}
+.wrapper {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+}
+@media screen and (max-width: 1000px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+.wrapper .statictxt {
+  color: $black-color;
+  font-size: map-get($size, xl);
+  font-weight: bold;
+}
+.wrapper .dynamictxts {
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+  display: grid;
+}
+.dynamictxts li {
+  list-style: none;
+  color: $unique-color;
+  font-size: map-get($size, xl);
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 16s steps(4) infinite;
+}
+
+@keyframes slide {
+  100% {
+    top: -360px;
+  }
+}
+.dynamictxts li span {
+  position: relative;
+  margin: 5px 0;
+  line-height: 80px;
+}
+.dynamictxts li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background: $white-color;
+  border-left: 5px solid $unique-color;
+  animation: typing 4s steps(10) infinite;
+}
+@keyframes typing {
+  40%,
+  60% {
+    left: calc(100% + 30px);
+  }
+  100% {
+    left: 0;
+  }
+}

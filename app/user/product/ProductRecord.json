@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "Apple Vision Pro",
+    "price": 2345,
+    "src": "/Img/VisionPro.png",
+    "alt": "Apples"
+  },
+  {
+    "id": 2,
+    "title": "Apple ",
+    "price": 7897,
+    "src": "/Img/VisionPro2.png",
+    "alt": "Apples"
+  },
+  {
+    "id": 3,
+    "title": "Samsung",
+    "price": 8990,
+    "src": "/Img/Samsung.png",
+    "alt": "Apples"
+  },
+  {
+    "id": 4,
+    "title": "Dell G16 Gaming Laptop",
+    "price": 2345,
+    "src": "/Img/DellG16.png",
+    "alt": "Apples"
+  },
+  {
+    "id": 5,
+    "title": "Adam T7V Studio Monitor ",
+    "price": 7897,
+    "src": "/Img/Adam.png",
+    "alt": "Adam T7V"
+  },
+  {
+    "id": 6,
+    "title": "Apple Smart Watch",
+    "price": 2345,
+    "src": "/Img/smartwatch.png",
+    "alt": "Apples Smart Watch"
+  },
+  {
+    "id": 7,
+    "title": "Iphone 15 Pro Max ",
+    "price": 7897,
+    "src": "/Img/Iphone15.png",
+    "alt": "Iphone 15"
+  },
+  {
+    "id": 8,
+    "title": "Samsung",
+    "price": 8990,
+    "src": "/Img/Samsung.png",
+    "alt": "Apples"
+  },
+  {
+    "id": 9,
+    "title": "Dell G16 Gaming Laptop",
+    "price": 2345,
+    "src": "/Img/DellG16.png",
+    "alt": "Apples"
+  },
+  {
+    "id": 10,
+    "title": "Apple ",
+    "price": 7897,
+    "src": "/Img/VisionPro2.png",
+    "alt": "Apples"
+  }
+]

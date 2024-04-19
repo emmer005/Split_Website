@@ -1,0 +1,27 @@
+// utilities class
+$white-color: #fff;
+$black-color: black;
+$button-color: #0d8d2b;
+$unique-color: #850054;
+$header-color: #194668;
+$shadow-color: 0px 0px 6px rgba(8, 8, 8, 0.3);
+$flow-space: 3rem;
+
+$marginSpace: (
+  "sm": 0.8rem,
+  "md": 6rem,
+  "lg": 8rem,
+  "auto": (
+    auto,
+  ),
+);
+$size: (
+  "sm": clamp(0.8rem, 2.3vh, 2rem),
+  "md": 1rem,
+  "lg": 1.4rem,
+  "xl": clamp(2.5rem, 3.6vw, 8rem),
+);
+
+.subText {
+  font-size: map-get($size, sm);
+}

@@ -1,0 +1,15 @@
+.mainBody {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: 50px;
+  top: 40px;
+  gap: 0.5rem;
+  cursor: pointer;
+  div {
+    width: 40px;
+    border-radius: 5px;
+    height: 4px;
+    background-color: rgb(255, 255, 255);
+  }
+}

@@ -1,0 +1,78 @@
+@mixin contantAfter() {
+  content: "";
+
+  position: absolute;
+}
+
+.after {
+  position: relative;
+  &::after {
+    @include contantAfter();
+    border-left: 2px dashed black;
+    border-bottom: 2px dashed black;
+    width: 6.5vw;
+    height: 100px;
+    left: 50%;
+    bottom: -120px;
+  }
+}
+.aftera {
+  position: relative;
+  &::after {
+    @include contantAfter();
+    border-right: 2px dashed black;
+    border-bottom: 2px dashed black;
+    width: 6.5vw;
+    height: 100px;
+    right: 50%;
+    bottom: -120px;
+  }
+}
+.after3 {
+  position: relative;
+  &::after {
+    @include contantAfter();
+    border-left: 2px dashed black;
+    border-bottom: 2px dashed black;
+    width: 26vw;
+    height: 50%;
+    margin-left: 5px;
+    left: 50%;
+    bottom: -60px;
+  }
+}
+.after4 {
+  position: relative;
+  &::after {
+    @include contantAfter();
+    border-left: 2px dashed black;
+    border-bottom: 2px dashed black;
+    height: 50%;
+    width: 26vw;
+    margin-left: 5px;
+    left: 50%;
+    bottom: -60px;
+  }
+  &::before {
+    @include contantAfter();
+    border-left: 2px dashed black;
+
+    height: 50%;
+
+    margin-left: 5px;
+    left: 50%;
+    bottom: -124px;
+  }
+}
+
+.after5 {
+  position: relative;
+  &::after {
+    @include contantAfter();
+    border-left: 2px dashed black;
+    height: 50%;
+    margin-left: 5px;
+    left: 50%;
+    bottom: -60px;
+  }
+}

@@ -1,0 +1,28 @@
+.textAfter {
+  text-align: center;
+  width: 30vw;
+  position: relative;
+}
+.textAfter::after {
+  content: "";
+  position: absolute;
+  bottom: -80px;
+  height: 50px;
+  left: 50%;
+  border-left: 2px dashed black;
+}
+.key {
+  :nth-of-type(2) {
+    margin-left: 40px;
+  }
+  :nth-of-type(3) {
+    margin-left: 40px;
+  }
+}
+.ImageCropper {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 80px;
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+}

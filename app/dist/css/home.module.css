@@ -1,0 +1,47 @@
+.homePage {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.1)), url("../../../public/Img/HomePage.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.homeButton {
+  color: #fff;
+  background-color: var(--button-color);
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.s2 {
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  justify-content: space-between;
+  align-items: center;
+  background-color: #efefef;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 450px) {
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .form input:last-child {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}/*# sourceMappingURL=home.module.css.map */

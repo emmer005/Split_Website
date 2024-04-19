@@ -1,0 +1,27 @@
+@import "../../components/sass/variables";
+.main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(20px, 100%), 1fr));
+  div {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    h1 {
+      padding: 0 1rem;
+    }
+    h1::before {
+      width: 4px;
+      left: 0;
+      height: 100%;
+      background-color: $button-color;
+      content: "";
+      position: absolute;
+    }
+    .Image {
+      max-width: 350px;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

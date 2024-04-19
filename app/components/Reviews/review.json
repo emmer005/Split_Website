@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "number": "50K",
+    "Title": "Global Users",
+    "SubText": "This is a larger number than the other two numbers."
+  },
+  {
+    "id": 2,
+    "number": "700+",
+    "Title": "5 Start Reviews",
+    "SubText": "A modest number to start off metrics section."
+  },
+  {
+    "id": 3,
+    "number": "40%",
+    "Title": "Upto Savings rate",
+    "SubText": "Earn the bast rewards and establish credit history"
+  },
+  {
+    "id": 4,
+    "number": "60",
+    "Title": "Team Members",
+    "SubText": "That's massive increase over previous performance."
+  }
+]

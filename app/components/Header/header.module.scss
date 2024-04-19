@@ -1,0 +1,39 @@
+@import "../sass/variables";
+
+.mainHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $header-color;
+  color: $white-color;
+  width: 100%;
+  padding: 1rem 3rem;
+  margin-bottom: map-get($marginSpace, auto);
+  li {
+    position: relative;
+  }
+  li:hover::after {
+    width: 100%;
+    transition: 400ms;
+  }
+  li::after {
+    transition: 400ms;
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background-color: $white-color;
+    left: 0;
+    bottom: 0;
+  }
+}
+.Responsive {
+  background: rgba(23, 23, 23, 0.482);
+  backdrop-filter: blur(15px);
+}
+.ResponsiveButton{
+  background-color: $unique-color;
+  span{
+    color: $white-color;
+  }
+}
