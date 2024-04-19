@@ -49,7 +49,8 @@
 .animatedText {
   display: grid;
   width: fit-content;
-  height: 4vw;
+  height: 2.2rem;
+
   position: relative;
   top: 0;
   overflow: hidden;
@@ -74,13 +75,13 @@
     top: 0;
   }
   25% {
-    top: -60px;
+    top: -58px;
   }
   50% {
-    top: -120px;
+    top: -116px;
   }
   75% {
-    top: -180px;
+    top: -172px;
   }
 
   100% {
@@ -143,7 +144,7 @@
 }
 
 .section2 {
-  width: 80%;
+  
   display: grid;
   margin-inline: auto;
   grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
@@ -183,7 +184,7 @@
     input:nth-child(1) {
       background: none;
       outline: none;
-      min-width: fit-content;
+      min-width: 0;
       &::placeholder {
         color: white;
       }
@@ -194,5 +195,19 @@
       border-radius: 50px;
       cursor: pointer;
     }
+  }
+}
+.videoSection{
+  height: 70vh;
+  overflow: hidden;
+  display: grid;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  .videoBg{
+    background: linear-gradient(90deg, #85005463,  #0d8d2b3c);
+    display: grid;
+    justify-content: center;
+    align-items: center;
   }
 }
