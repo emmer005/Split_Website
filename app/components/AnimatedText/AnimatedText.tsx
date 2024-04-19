@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import { once } from "events";
 import { color, frame } from "framer-motion";
 import { delay, motion, transform, useInView } from "framer-motion";
+import { v4 as uuidv4 } from 'uuid';
 
 interface type {
   text: string;
@@ -31,9 +32,9 @@ const AnimatedText = (props: type) => {
       transition={{ staggerChildren: 0.1 }}
     >
       {props.text.split(" ").map((word) => (
-        <span key={props.text} className="inline-block">
+        <span key={uuidv4()}  className="inline-block">
           {word.split("").map((char) => (
-            <motion.span key={char} className=" inline-block" variants={def}>
+            <motion.span  key={uuidv4()} className=" inline-block" variants={def}>
               {char}
             </motion.span>
           ))}
