@@ -6,12 +6,15 @@ import { BsFillGrid3X3GapFill } from "react-icons/bs";
 import { IoMdMenu } from "react-icons/io";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { TiArrowForward } from "react-icons/ti";
+import LatestNew from "./LatestNew";
 import Link from "next/link";
 import { v4 as uuidv4 } from "uuid";
+import MainNews from "./MainNews";
+
 
 const Blog = () => {
   return (
-    <div className="grid gap-16">
+    <div className="grid gap-16 ">
       <section className="py-10  relative h-[50vh] flex items-center justify-center overflow-hidden ">
         <div className=" z-10  font-sans   flex flex-col justify-center items-center">
           <span className=" text-sm">BLOG</span>
@@ -45,7 +48,7 @@ const Blog = () => {
 
       <section>
         <div className={`${styles.blog_grid}`}>
-          <div>
+          <div className={` `}>
             <div className=" text-sm flex items-center gap-[6vw]">
               <div className="gap-[4vw] flex items-center justify-center">
                 <div className=" gap-2 flex items-center justify-center">
@@ -64,9 +67,12 @@ const Blog = () => {
                 </span>
               </div>
             </div>
+            <div>
+              <MainNews/>
+            </div>
           </div>
 
-          <div>
+          <div className={` grid item-center justify-center   gap-10`}>
             <div className=" flex w-fit items-center pl-4 border-2 border-zinc-500 rounded-[200px] overflow-hidden">
               <input
                 className=" outline-none bg-transparent"
@@ -78,7 +84,7 @@ const Blog = () => {
               </button>
             </div>
             <div>
-              <h1>ALL CATEGORIES</h1>
+              <h1 className=" text-lg font-bold">ALL CATEGORIES</h1>
               <ul className=" flex flex-col gap-2">
                 {categories.map((list) => (
                   <div key={uuidv4()} className={styles.Cate_list_main}>
@@ -93,6 +99,15 @@ const Blog = () => {
                   </div>
                 ))}
               </ul>
+            </div>
+
+            <div className=" flex gap-4 flex-col">
+              <div>
+                <h1>LATEST POST</h1>
+              </div>
+              <div>
+                <LatestNew/>
+              </div>
             </div>
           </div>
         </div>
