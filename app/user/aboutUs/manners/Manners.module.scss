@@ -1,22 +1,21 @@
 @import "../../../components/sass/variables";
 .imageCircleMain {
-    width: 100%;
-    padding: 1rem 0;
-    background-color: rgb(214, 214, 214);
-    // this class is about three div section containing images of 2 each
-    .imageCircle {
-      margin-block: 4rem;
-      margin-inline: auto;
-      width: 80%;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  width: 100%;
+  padding: 1rem 0;
+  background-color: rgb(214, 214, 214);
+  // this class is about three div section containing images of 2 each
+  .imageCircle {
+    margin-block: 4rem;
+    margin-inline: auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr));
+    gap: 2rem;
+    div {
+      display: flex;
+      flex-direction: column;
       gap: 2rem;
-      div {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        height: fit-content;
-      }
+      height: fit-content;
     }
   }
-  
+}

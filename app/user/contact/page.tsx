@@ -11,7 +11,7 @@ import items_image5 from "../../../public/Img/hands.jpg";
 import Image from "next/image";
 const Contact = () => {
   return (
-    <div className="bg-slate-200 overflow-hidden flex flex-col p-10 justify-center relative 2xl:h-screen">
+    <div className="bg-slate-200 overflow-hidden my-20 w-[80vw] mx-auto flex flex-col p-10 justify-center relative 2xl:h-screen">
       <div className={styles.contactMain}>
         <div className="flex flex-col gap-7 ">
           <h1 className="text-3xl font-bold">Contact</h1>
@@ -109,7 +109,6 @@ const Contact = () => {
         src={items_image3}
         alt="iksl"
       />
-     
     </div>
   );
 };

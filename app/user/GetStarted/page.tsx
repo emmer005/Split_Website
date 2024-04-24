@@ -8,7 +8,7 @@ import Button from "@/app/components/Button/Button";
 
 const GetStarted = () => {
   return (
-    <div className="grid grid-cols-2">
+    <div className="grid my-20 w-[80vw] mx-auto  grid-cols-2">
       <Image src={Security} alt="Security" />
       <div className=" flex justify-center  items-center">
         <div className="flex gap-8 flex-col">

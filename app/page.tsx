@@ -11,7 +11,7 @@ import { AiFillSound } from "react-icons/ai";
 import AnimatedText from "./components/AnimatedText/AnimatedText";
 import { title } from "process";
 import Autobox from "./components/Home/AutoBox/Autobox";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 import Link from "next/link";
 import Button from "./components/Button/Button";
 import Product from "./user/product/page";
@@ -119,42 +119,58 @@ export default function Home() {
         </form>
       </section>
       {/* Section two */}
-      <section >
-    <div className=" mx-auto  w-[80%] space-y-8">
-      <TextAfter name="Services"/>
-     <div className={`${styles.section2} gap-y-5 gap-x-3`} >
-     {
-        AutoboxArray.map((items) => (
-          <Autobox key={uuidv4()} tailwindStyle={items.bgColor} imagePath={items.imagePage} title={items.title} subText={items.subText}/>
-        ))
-      }
-     </div>
-    </div>
+      <section>
+        <div className=" mx-auto  w-[80%] space-y-8">
+          <TextAfter name="Services" />
+          <div className={`${styles.section2} gap-y-5 gap-x-3`}>
+            {AutoboxArray.map((items) => (
+              <Autobox
+                key={uuidv4()}
+                tailwindStyle={items.bgColor}
+                imagePath={items.imagePage}
+                title={items.title}
+                subText={items.subText}
+              />
+            ))}
+          </div>
+        </div>
       </section>
-      
+
       <section className={styles.videoSection}>
-        <video className="z-0 flex object-cover h-[100%]  absolute w-[100vw] " autoPlay loop muted>
-          <source  src="/Img/video.mp4" type="video/mp4" />
+        <video
+          className="z-0 flex object-cover h-[100%]  absolute w-[100vw] "
+          autoPlay
+          loop
+          muted
+        >
+          <source src="/Img/video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div className={ `${styles.videoBg} h-full w-full absolute `}>
-        <div className="  flex flex-col text-center gap-4 items-center">
-        <h1 className={`${styles.h1} text-white`}>Explore the world of Technology</h1>
-        <h4 className={`${styles.subText} text-zinc-300 w-[70vw] "`}> Technology is about meeting human needs through innovation and action. Stay informed about the rapid evolution of the tech landscape in our digital age!</h4>
-          <Link href="/user/GetStarted">
-          <Button title="Go start now" bgColor="#fe02a0" />
-        </Link>
-        </div>
+        <div className={`${styles.videoBg} h-full w-full absolute `}>
+          <div className="  flex flex-col text-center gap-4 items-center">
+            <h1 className={`${styles.h1} text-white`}>
+              Explore the world of Technology
+            </h1>
+            <h4 className={`${styles.subText} text-zinc-300 w-[70vw] "`}>
+              {" "}
+              Technology is about meeting human needs through innovation and
+              action. Stay informed about the rapid evolution of the tech
+              landscape in our digital age!
+            </h4>
+            <Link href="/user/GetStarted">
+              <Button title="Go start now" bgColor="#fe02a0" />
+            </Link>
+          </div>
         </div>
       </section>
 
       <section className="">
-      <TextAfter name="Product"/>
-   <Product/>
+        <TextAfter name="Product" />
+        <Product />
       </section>
       <section>
-     <TextAfter name="About"/>
-        <Manner/>
+        <TextAfter name="About" />
+        <Manner />
       </section>
     </div>
   );
@@ -163,22 +179,23 @@ export default function Home() {
 const AutoboxArray = [
   {
     title: "Automated Reports",
-    subText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minus molestias reiciendis",
-    imagePage:"/Img/google.png",
-    bgColor: "bg-slate-300 mt-20 "
+    subText:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minus molestias reiciendis",
+    imagePage: "/Img/google.png",
+    bgColor: "bg-slate-300  ",
   },
   {
     title: "Customer Care",
-    subText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minus molestias reiciendis",
-    imagePage:"/Img/customercare.png"
-    ,
-    bgColor: "bg-pink-200 "
+    subText:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minus molestias reiciendis",
+    imagePage: "/Img/customercare.png",
+    bgColor: "bg-pink-200 ",
   },
   {
     title: "Accessibility",
-    subText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minus molestias reiciendis",
-    imagePage:"/Img/access.png"
-    ,
-    bgColor: "bg-slate-300 mt-20"
-  }
-]
+    subText:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minus molestias reiciendis",
+    imagePage: "/Img/access.png",
+    bgColor: "bg-slate-300 ",
+  },
+];

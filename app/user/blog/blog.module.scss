@@ -1,0 +1,23 @@
+@import "../../components/sass/variables";
+.text_Stroke {
+  color: $unique-color;
+
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+}
+.blog_grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.Cate_list {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.Cate_list:hover .icon {
+  display: block;
+  transition: 2s;
+}
+.icon {
+  display: none;
+}

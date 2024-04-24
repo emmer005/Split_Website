@@ -24,7 +24,7 @@ const config: Config = {
       lg: { max: "1000px" },
       // => @media (max-width: 1023px) { ... }
 
-      md: { max: "800px" },
+      md: { max: "950px" },
       // => @media max-width: 767px) { ... }
 
       sm: { max: "500px" },
